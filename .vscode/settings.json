@@ -1,0 +1,10 @@
+{
+    "python.analysis.extraPaths": [
+        "./arm/librw",
+        "./arm/librw",
+        "./arm"
+    ],
+    "files.associations": {
+        "android-ashmem.h": "c"
+    }
+}

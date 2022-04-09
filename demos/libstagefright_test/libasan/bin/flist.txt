@@ -1,0 +1,1 @@
+{"12288": {"name": "__cfi_check", "sz": 100, "visibility": "STV_DEFAULT", "bind": "STB_GLOBAL"}}

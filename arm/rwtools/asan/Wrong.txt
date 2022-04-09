@@ -1,0 +1,674 @@
+/tmp/.afl-58729-1643076255.s:19:8: error: fixup value too large for data type!
+        .byte (.LC16d14-.LC16c0c)/4
+              ^
+/tmp/.afl-58729-1643076255.s:21:8: error: fixup value too large for data type!
+        .byte (.LC16cec-.LC16c0c)/4
+              ^
+/tmp/.afl-58729-1643076255.s:23:8: error: fixup value too large for data type!
+        .byte (.LC16cc4-.LC16c0c)/4
+              ^
+/tmp/.afl-58729-1643076255.s:25:8: error: fixup value too large for data type!
+        .byte (.LC16e84-.LC16c0c)/4
+              ^
+/tmp/.afl-58729-1643076255.s:27:8: error: fixup value too large for data type!
+        .byte (.LC16df8-.LC16c0c)/4
+              ^
+/tmp/.afl-58729-1643076255.s:29:8: error: fixup value too large for data type!
+        .byte (.LC16d30-.LC16c0c)/4
+              ^
+/tmp/.afl-58729-1643076255.s:31:8: error: fixup value too large for data type!
+        .byte (.LC16dc4-.LC16c0c)/4
+              ^
+/tmp/.afl-58729-1643076255.s:33:8: error: fixup value too large for data type!
+        .byte (.LC16cd8-.LC16c0c)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8039:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8101:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8105:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8107:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8109:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8113:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8115:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8117:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8119:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8121:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8123:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8125:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8129:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8131:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8133:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8135:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8137:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8139:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8141:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8143:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8145:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8147:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8149:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8151:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8153:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8155:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8157:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8161:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8163:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8165:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8167:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8169:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8171:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8173:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8175:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8177:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8179:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8181:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8183:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8185:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8187:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8189:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8191:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8193:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8195:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8197:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8199:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8201:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8203:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8205:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8207:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8209:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8211:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8213:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8215:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8217:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8219:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8221:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8231:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8235:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8237:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8239:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8243:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8245:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8247:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8249:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8251:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8253:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8255:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8259:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8261:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8263:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8265:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8267:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8269:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8271:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8273:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8275:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8277:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8279:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8281:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8283:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8285:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8287:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8291:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8293:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8295:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8297:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8299:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8301:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8303:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8305:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8307:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8309:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8311:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8313:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8315:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8317:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8319:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8321:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8323:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8325:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8327:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8329:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8331:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8333:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8335:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8337:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8339:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8341:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8343:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8345:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8347:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8349:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8351:8: error: fixup value too large for data type!
+        .byte (.LC1a510-.LC1a3a0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8923:8: error: fixup value too large for data type!
+        .byte (.LC1b3b0-.LC1b1a4)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8925:8: error: fixup value too large for data type!
+        .byte (.LC1b3c8-.LC1b1a4)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8927:8: error: fixup value too large for data type!
+        .byte (.LC1b398-.LC1b1a4)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8929:8: error: fixup value too large for data type!
+        .byte (.LC1b45c-.LC1b1a4)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8931:8: error: fixup value too large for data type!
+        .byte (.LC1b408-.LC1b1a4)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8933:8: error: fixup value too large for data type!
+        .byte (.LC1b3e0-.LC1b1a4)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8935:8: error: fixup value too large for data type!
+        .byte (.LC1c6bc-.LC1c5d0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8951:8: error: fixup value too large for data type!
+        .byte (.LC1d1e0-.LC1ce10)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8953:8: error: fixup value too large for data type!
+        .byte (.LC1d1c4-.LC1ce10)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8955:8: error: fixup value too large for data type!
+        .byte (.LC1d1c4-.LC1ce10)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8957:8: error: fixup value too large for data type!
+        .byte (.LC1d1c4-.LC1ce10)/4
+              ^
+/tmp/.afl-58729-1643076255.s:8959:8: error: fixup value too large for data type!
+        .byte (.LC1d1e8-.LC1ce10)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9003:8: error: fixup value too large for data type!
+        .byte (.LC223f8-.LC22318)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9005:8: error: fixup value too large for data type!
+        .byte (.LC224f4-.LC22318)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9007:8: error: fixup value too large for data type!
+        .byte (.LC2259c-.LC22318)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9009:8: error: fixup value too large for data type!
+        .byte (.LC2265c-.LC22318)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9011:8: error: fixup value too large for data type!
+        .byte (.LC22674-.LC22318)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9013:8: error: fixup value too large for data type!
+        .byte (.LC2268c-.LC22318)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9015:8: error: fixup value too large for data type!
+        .byte (.LC226a4-.LC22318)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9035:8: error: fixup value too large for data type!
+        .byte (.LC240a4-.LC23f7c)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9037:8: error: fixup value too large for data type!
+        .byte (.LC241d8-.LC23f7c)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9039:8: error: fixup value too large for data type!
+        .byte (.LC241f0-.LC23f7c)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9041:8: error: fixup value too large for data type!
+        .byte (.LC24208-.LC23f7c)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9043:8: error: fixup value too large for data type!
+        .byte (.LC24220-.LC23f7c)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9045:8: error: fixup value too large for data type!
+        .byte (.LC24238-.LC23f7c)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9047:8: error: fixup value too large for data type!
+        .byte (.LC24250-.LC23f7c)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9067:8: error: fixup value too large for data type!
+        .byte (.LC2704c-.LC26f6c)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9069:8: error: fixup value too large for data type!
+        .byte (.LC270d4-.LC26f6c)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9071:8: error: fixup value too large for data type!
+        .byte (.LC27184-.LC26f6c)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9073:8: error: fixup value too large for data type!
+        .byte (.LC2719c-.LC26f6c)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9075:8: error: fixup value too large for data type!
+        .byte (.LC271b4-.LC26f6c)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9077:8: error: fixup value too large for data type!
+        .byte (.LC271cc-.LC26f6c)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9079:8: error: fixup value too large for data type!
+        .byte (.LC271e4-.LC26f6c)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9131:8: error: fixup value too large for data type!
+        .byte (.LC2c958-.LC2c774)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9133:8: error: fixup value too large for data type!
+        .byte (.LC2c9dc-.LC2c774)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9135:8: error: fixup value too large for data type!
+        .byte (.LC2ca88-.LC2c774)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9137:8: error: fixup value too large for data type!
+        .byte (.LC2caa0-.LC2c774)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9139:8: error: fixup value too large for data type!
+        .byte (.LC2cab8-.LC2c774)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9141:8: error: fixup value too large for data type!
+        .byte (.LC2cad0-.LC2c774)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9143:8: error: fixup value too large for data type!
+        .byte (.LC2cae8-.LC2c774)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9195:8: error: fixup value too large for data type!
+        .byte (.LC325b4-.LC324d4)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9197:8: error: fixup value too large for data type!
+        .byte (.LC32638-.LC324d4)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9199:8: error: fixup value too large for data type!
+        .byte (.LC326e4-.LC324d4)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9201:8: error: fixup value too large for data type!
+        .byte (.LC326fc-.LC324d4)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9203:8: error: fixup value too large for data type!
+        .byte (.LC32714-.LC324d4)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9205:8: error: fixup value too large for data type!
+        .byte (.LC3272c-.LC324d4)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9207:8: error: fixup value too large for data type!
+        .byte (.LC32744-.LC324d4)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9259:8: error: fixup value too large for data type!
+        .byte (.LC37790-.LC37670)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9261:8: error: fixup value too large for data type!
+        .byte (.LC378b4-.LC37670)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9263:8: error: fixup value too large for data type!
+        .byte (.LC3798c-.LC37670)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9265:8: error: fixup value too large for data type!
+        .byte (.LC379a4-.LC37670)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9267:8: error: fixup value too large for data type!
+        .byte (.LC379bc-.LC37670)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9269:8: error: fixup value too large for data type!
+        .byte (.LC379d4-.LC37670)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9271:8: error: fixup value too large for data type!
+        .byte (.LC379ec-.LC37670)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9323:8: error: fixup value too large for data type!
+        .byte (.LC3d204-.LC3d138)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9325:8: error: fixup value too large for data type!
+        .byte (.LC3d27c-.LC3d138)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9327:8: error: fixup value too large for data type!
+        .byte (.LC3d314-.LC3d138)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9329:8: error: fixup value too large for data type!
+        .byte (.LC3d3b4-.LC3d138)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9331:8: error: fixup value too large for data type!
+        .byte (.LC3d3c8-.LC3d138)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9333:8: error: fixup value too large for data type!
+        .byte (.LC3d3dc-.LC3d138)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9335:8: error: fixup value too large for data type!
+        .byte (.LC3d3f0-.LC3d138)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9451:8: error: fixup value too large for data type!
+        .byte (.LC4872c-.LC48660)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9453:8: error: fixup value too large for data type!
+        .byte (.LC48804-.LC48660)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9455:8: error: fixup value too large for data type!
+        .byte (.LC48894-.LC48660)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9457:8: error: fixup value too large for data type!
+        .byte (.LC48938-.LC48660)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9459:8: error: fixup value too large for data type!
+        .byte (.LC489f0-.LC48660)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9461:8: error: fixup value too large for data type!
+        .byte (.LC48a04-.LC48660)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9463:8: error: fixup value too large for data type!
+        .byte (.LC48a18-.LC48660)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9467:8: error: fixup value too large for data type!
+        .byte (.LC4a668-.LC4a560)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9469:8: error: fixup value too large for data type!
+        .byte (.LC4a71c-.LC4a560)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9471:8: error: fixup value too large for data type!
+        .byte (.LC4a730-.LC4a560)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9473:8: error: fixup value too large for data type!
+        .byte (.LC4a744-.LC4a560)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9475:8: error: fixup value too large for data type!
+        .byte (.LC4a758-.LC4a560)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9477:8: error: fixup value too large for data type!
+        .byte (.LC4a76c-.LC4a560)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9479:8: error: fixup value too large for data type!
+        .byte (.LC4a780-.LC4a560)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9483:8: error: fixup value too large for data type!
+        .byte (.LC4a5dc-.LC4a4b8)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9485:8: error: fixup value too large for data type!
+        .byte (.LC4a5f0-.LC4a4b8)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9487:8: error: fixup value too large for data type!
+        .byte (.LC4a604-.LC4a4b8)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9489:8: error: fixup value too large for data type!
+        .byte (.LC4a618-.LC4a4b8)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9491:8: error: fixup value too large for data type!
+        .byte (.LC4a62c-.LC4a4b8)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9493:8: error: fixup value too large for data type!
+        .byte (.LC4a640-.LC4a4b8)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9495:8: error: fixup value too large for data type!
+        .byte (.LC4a654-.LC4a4b8)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9515:8: error: fixup value too large for data type!
+        .byte (.LC4e48c-.LC4e358)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9517:8: error: fixup value too large for data type!
+        .byte (.LC4e560-.LC4e358)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9519:8: error: fixup value too large for data type!
+        .byte (.LC4e64c-.LC4e358)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9521:8: error: fixup value too large for data type!
+        .byte (.LC4e660-.LC4e358)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9523:8: error: fixup value too large for data type!
+        .byte (.LC4e674-.LC4e358)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9525:8: error: fixup value too large for data type!
+        .byte (.LC4e688-.LC4e358)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9527:8: error: fixup value too large for data type!
+        .byte (.LC4e69c-.LC4e358)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9531:8: error: fixup value too large for data type!
+        .byte (.LC51894-.LC51780)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9533:8: error: fixup value too large for data type!
+        .byte (.LC5195c-.LC51780)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9535:8: error: fixup value too large for data type!
+        .byte (.LC51970-.LC51780)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9537:8: error: fixup value too large for data type!
+        .byte (.LC51984-.LC51780)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9539:8: error: fixup value too large for data type!
+        .byte (.LC51998-.LC51780)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9541:8: error: fixup value too large for data type!
+        .byte (.LC519ac-.LC51780)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9543:8: error: fixup value too large for data type!
+        .byte (.LC519c0-.LC51780)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9567:8: error: fixup value too large for data type!
+        .byte (.LC556b4-.LC555d0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:9569:8: error: fixup value too large for data type!
+        .byte (.LC55724-.LC555d0)/4
+              ^
+/tmp/.afl-58729-1643076255.s:26241:8: error: fixup value too large for data type!
+        .byte (.LC578a8-.LC5781c)/4
+              ^
+/tmp/.afl-58729-1643076255.s:26245:8: error: fixup value too large for data type!
+        .byte (.LC578c0-.LC5781c)/4
+              ^
+/tmp/.afl-58729-1643076255.s:26247:8: error: fixup value too large for data type!
+        .byte (.LC578cc-.LC5781c)/4
+              ^
+/tmp/.afl-58729-1643076255.s:26249:8: error: fixup value too large for data type!
+        .byte (.LC578b4-.LC5781c)/4

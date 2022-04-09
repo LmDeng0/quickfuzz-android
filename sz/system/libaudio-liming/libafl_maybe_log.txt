@@ -1,0 +1,106 @@
+
+libafl_maybe_log.so:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+00000000000006bc <__afl_maybe_log@@Base-0x64>:
+ 6bc:	d503245f 	hint	#0x22
+ 6c0:	b0000000 	adrp	x0, 1000 <printf@plt+0x800>
+ 6c4:	91204000 	add	x0, x0, #0x810
+ 6c8:	1400003e 	b	7c0 <__cxa_finalize@plt>
+ 6cc:	d503245f 	hint	#0x22
+ 6d0:	d65f03c0 	ret
+ 6d4:	d503245f 	hint	#0x22
+ 6d8:	17fffffd 	b	6cc <__afl_maybe_log@@Base-0x54>
+ 6dc:	d503245f 	hint	#0x22
+ 6e0:	b4000060 	cbz	x0, 6ec <__afl_maybe_log@@Base-0x34>
+ 6e4:	aa0003f0 	mov	x16, x0
+ 6e8:	d61f0200 	br	x16
+ 6ec:	d65f03c0 	ret
+ 6f0:	d503245f 	hint	#0x22
+ 6f4:	90000008 	adrp	x8, 0 <__afl_maybe_log@@Base-0x720>
+ 6f8:	911b7108 	add	x8, x8, #0x6dc
+ 6fc:	b0000002 	adrp	x2, 1000 <printf@plt+0x800>
+ 700:	91204042 	add	x2, x2, #0x810
+ 704:	aa0003e1 	mov	x1, x0
+ 708:	aa0803e0 	mov	x0, x8
+ 70c:	14000031 	b	7d0 <__cxa_atexit@plt>
+ 710:	d503245f 	hint	#0x22
+ 714:	b0000003 	adrp	x3, 1000 <printf@plt+0x800>
+ 718:	91204063 	add	x3, x3, #0x810
+ 71c:	14000031 	b	7e0 <__register_atfork@plt>
+
+0000000000000720 <__afl_maybe_log@@Base>:
+ 720:	d10083ff 	sub	sp, sp, #0x20
+ 724:	a9017bfd 	stp	x29, x30, [sp, #16]
+ 728:	910043fd 	add	x29, sp, #0x10
+ 72c:	b81fc3a0 	stur	w0, [x29, #-4]
+ 730:	b85fc3a8 	ldur	w8, [x29, #-4]
+ 734:	b90007e8 	str	w8, [sp, #4]
+ 738:	b0000000 	adrp	x0, 1000 <printf@plt+0x800>
+ 73c:	f944e400 	ldr	x0, [x0, #2504]
+ 740:	9400002c 	bl	7f0 <__emutls_get_address@plt>
+ 744:	b94007e8 	ldr	w8, [sp, #4]
+ 748:	b9400009 	ldr	w9, [x0]
+ 74c:	4a090108 	eor	w8, w8, w9
+ 750:	b9000be8 	str	w8, [sp, #8]
+ 754:	b0000008 	adrp	x8, 1000 <printf@plt+0x800>
+ 758:	f944e908 	ldr	x8, [x8, #2512]
+ 75c:	f9400109 	ldr	x9, [x8]
+ 760:	b9400be8 	ldr	w8, [sp, #8]
+ 764:	2a0803ea 	mov	w10, w8
+ 768:	386a6928 	ldrb	w8, [x9, x10]
+ 76c:	11000508 	add	w8, w8, #0x1
+ 770:	382a6928 	strb	w8, [x9, x10]
+ 774:	b85fc3a8 	ldur	w8, [x29, #-4]
+ 778:	53017d08 	lsr	w8, w8, #1
+ 77c:	b9000008 	str	w8, [x0]
+ 780:	90000000 	adrp	x0, 0 <__afl_maybe_log@@Base-0x720>
+ 784:	9116a000 	add	x0, x0, #0x5a8
+ 788:	9400001e 	bl	800 <printf@plt>
+ 78c:	a9417bfd 	ldp	x29, x30, [sp, #16]
+ 790:	910083ff 	add	sp, sp, #0x20
+ 794:	d65f03c0 	ret
+
+Disassembly of section .plt:
+
+00000000000007a0 <__cxa_finalize@plt-0x20>:
+ 7a0:	a9bf7bf0 	stp	x16, x30, [sp, #-16]!
+ 7a4:	b0000010 	adrp	x16, 1000 <printf@plt+0x800>
+ 7a8:	f944f611 	ldr	x17, [x16, #2536]
+ 7ac:	9127a210 	add	x16, x16, #0x9e8
+ 7b0:	d61f0220 	br	x17
+ 7b4:	d503201f 	nop
+ 7b8:	d503201f 	nop
+ 7bc:	d503201f 	nop
+
+00000000000007c0 <__cxa_finalize@plt>:
+ 7c0:	b0000010 	adrp	x16, 1000 <printf@plt+0x800>
+ 7c4:	f944fa11 	ldr	x17, [x16, #2544]
+ 7c8:	9127c210 	add	x16, x16, #0x9f0
+ 7cc:	d61f0220 	br	x17
+
+00000000000007d0 <__cxa_atexit@plt>:
+ 7d0:	b0000010 	adrp	x16, 1000 <printf@plt+0x800>
+ 7d4:	f944fe11 	ldr	x17, [x16, #2552]
+ 7d8:	9127e210 	add	x16, x16, #0x9f8
+ 7dc:	d61f0220 	br	x17
+
+00000000000007e0 <__register_atfork@plt>:
+ 7e0:	b0000010 	adrp	x16, 1000 <printf@plt+0x800>
+ 7e4:	f9450211 	ldr	x17, [x16, #2560]
+ 7e8:	91280210 	add	x16, x16, #0xa00
+ 7ec:	d61f0220 	br	x17
+
+00000000000007f0 <__emutls_get_address@plt>:
+ 7f0:	b0000010 	adrp	x16, 1000 <printf@plt+0x800>
+ 7f4:	f9450611 	ldr	x17, [x16, #2568]
+ 7f8:	91282210 	add	x16, x16, #0xa08
+ 7fc:	d61f0220 	br	x17
+
+0000000000000800 <printf@plt>:
+ 800:	b0000010 	adrp	x16, 1000 <printf@plt+0x800>
+ 804:	f9450a11 	ldr	x17, [x16, #2576]
+ 808:	91284210 	add	x16, x16, #0xa10
+ 80c:	d61f0220 	br	x17
