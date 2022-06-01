@@ -45,19 +45,8 @@ afl-fuzz 2.52b by <lcamtuf@google.com>
 
 ```
 
-# Retrowrite
+# quickfuzz
 
-Code repository for "Retrowrite: Statically Instrumenting COTS Binaries for
-Fuzzing and Sanitization" (in *IEEE S&P'20*). Please refer to the
-[paper](https://nebelwelt.net/publications/files/20Oakland.pdf) for
-technical details. There's also a
-[36c3 presentation](http://nebelwelt.net/publications/files/19CCC-presentation.pdf)
-and [36c3 video](https://media.ccc.de/v/36c3-10880-no_source_no_problem_high_speed_binary_fuzzing)
-to get you started.
-
-This project contains 2 different version of retrowrite :
-* [Retrowrite](#retrowrite-1) to rewrite classic userspace binaries, and
-* [KRetrowrite](#kretrowrite) to rewrite and fuzz kernel modules.
 
 The two versions can be used independently of each other or at the same time.
 In case you want to use both please follow the instructions for KRetrowrite.
@@ -89,8 +78,8 @@ options, and may be accessed with `-h`.
 To start with use retrowrite command:
 
 ```bash
-(retro) $ retrowrite --help
-usage: retrowrite [-h] [-a] [-s] [-k] [--kcov] [-c] [--ignore-no-pie] [--ignore-stripped] bin outfile
+(retro) $ quickfuzz --help
+usage: quickfuzz [-h] [-a] [-s] [-k] [--kcov] [-c] [--ignore-no-pie] [--ignore-stripped] bin outfile
 
 Retrofitting compiler passes though binary rewriting.
 
@@ -111,20 +100,20 @@ optional arguments:
 
 In case you load a non position independent code you will get the following message:
 ```
-(retro) $ retrowrite stack stack.c 
-***** RetroWrite requires a position-independent executable. *****
+(quickfuzz) $ quickfuzz stack stack.c 
+***** quickfuzz requires a position-independent executable. *****
 It looks like stack is not position independent
 If you really want to continue, because you think retrowrite has made a mistake, pass --ignore-no-pie.
 ```
 In the case you think retrowrite is mistaking you can use the argument `--ignore-no-pie`.
 
 
-## Retrowrite
+## quickfuzz
 ### Quick Usage Guide
 
-This section highlights the steps to get you up to speed to use userspace retrowrite for rewriting PIC binaries.
+This section highlights the steps to get you up to speed to use userspace quickfuzz for rewriting PIC binaries.
 
-Retrowrite ships with an utility with the following features:
+quickfuzz ships with an utility with the following features:
 * Generate symbolized assembly files from binaries without source code
 * BASan: Instrument binary with binary-only Address Sanitizer 
 * Support for symbolizing (linux) kernel modules 
@@ -153,14 +142,14 @@ Activate the virtualenv (from root of the repository):
 
 ##### a. Instrument Binary with Binary-Address Sanitizer (BASan)
 
-`retrowrite --asan </path/to/binary/> </path/to/output/binary>`
+`rquickfuzz --asan </path/to/binary/> </path/to/output/binary>`
 
 Note: Make sure that the binary is position-independent and is not stripped.
 This can be checked using `file` command (the output should say `ELF shared object`).
 
 Example, create an instrumented version of `/bin/ls`:
 
-`retrowrite --asan /bin/ls ls-basan-instrumented`
+`quickfuzz --asan /bin/ls ls-basan-instrumented`
 
 This will generate an assembly (`.s`) file that can be assembled and linked
 using any compiler, example:
@@ -176,7 +165,7 @@ replace "asan_init_v4" by "asan_init"  in the assembly file, the following comma
 To generate symbolized assembly that may be modified by hand or post-processed
 by existing tools:
 
-`retrowrite </path/to/binary> <path/to/output/asm/files>`
+`quickfuzz </path/to/binary> <path/to/output/asm/files>`
 
 Post-modification, the asm files may be assembled to working binaries as
 described above.
@@ -254,42 +243,5 @@ In the [demos/](demos/) folder, you will find examples for userspace and kernel 
 ([demos/user_demo](demos/user_demo) and [demos/kernel_demo](demos/kernel_demo) respectively).
 
 
-## Cite
-
-The following publications cover different parts of the RetroWrite project:
-
-* *RetroWrite: Statically Instrumenting COTS Binaries for Fuzzing and Sanitization*
-  Sushant Dinesh, Nathan Burow, Dongyan Xu, and Mathias Payer.
-  **In Oakland'20: IEEE International Symposium on Security and Privacy, 2020**
-
-* *No source, no problem! High speed binary fuzzing*
-  Matteo Rizzo, and Mathias Payer.
-  **In 36c3'19: Chaos Communication Congress, 2019**
 
 
-# License -- MIT
-
-The MIT License
-
-Copyright (c) 2019 HexHive Group,
-Sushant Dinesh <sushant.dinesh94@gmail.com>,
-Matteo Rizzo <matteorizzo.personal@gmail.com>,
-Mathias Payer <mathias.payer@nebelwelt.net>
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
