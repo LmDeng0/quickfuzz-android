@@ -109,7 +109,7 @@ def append_function_to_result(lines, source_file):
     append_lines = []
     functions = []
 
-    line_tmp = ".globl {0}\n.set {1},{2}\n"
+    line_tmp = ".globl {0}\n.set {1},{2}\n" or ".local {0}\n.set {1},{2}\n"
     for line_set in lines:
         # [(num, func), (num, func)]
         funcs = [f[1] for f in line_set]
@@ -153,11 +153,12 @@ def append_function_to_result_2(lines, source_file):
     append_dict = {}
     functions = []
 
-    line_tmp = ".globl {0}\n.set {1},{2}\n"
+    line_tmp = ".globl {0}\n.set {1},{2}\n" 
+    print("ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ")
     for line_set in lines:
         # [(num, func), (num, func)]
         funcs = [f[1] for f in line_set]
-        if len(funcs) < 2:
+        if len(funcs) < 2:      
             continue
         target = funcs[0]
         # 出现数字的地方，可以递增排序
@@ -186,9 +187,15 @@ def append_function_to_result_2(lines, source_file):
             continue
         fa = ".globl {0}\n".format(sub_funcs[0])
         fb = ".globl {0}\n".format(sub_funcs[1])
+        #fc = ".local {0}\n".format(sub_funcs[0])
+        #fd = ".local {0}\n".format(sub_funcs[1])
         sba = ".set {0},{1}\n".format(sub_funcs[1], sub_funcs[0])
         sab = ".set {0},{1}\n".format(sub_funcs[0], sub_funcs[1])
+        #sdc = ".set {0},{1}\n".format(sub_funcs[1], sub_funcs[0])
+        #scd = ".set {0},{1}\n".format(sub_funcs[0], sub_funcs[1])
         if fa in source_lines and fb in source_lines:
+            continue
+        #if fc in source_lines and fd in source_lines:
             continue
         elif fa in source_lines and fb not in source_lines:
             append_lines.append(fb)
@@ -196,6 +203,12 @@ def append_function_to_result_2(lines, source_file):
         elif fa not in source_lines and fb in source_lines:
             append_lines.append(fa)
             append_lines.append(sab)
+        #elif fc in source_lines and fd not in source_lines:
+        #    append_lines.append(fd)
+        #    append_lines.append(sdc)
+        #elif fc not in source_lines and fd in source_lines:
+        #    append_lines.append(fc)
+        #    append_lines.append(scd)
         else:
             append_lines.append(fa)
             append_lines.append(fb)
@@ -438,7 +451,8 @@ if __name__ == "__main__":
     else:
         loader.load_data_sections(slist, lambda x: x in Rewriter.DATASECTIONS)
 
-    reloc_list = loader.reloc_list_from_symtab()
+    #reloc_list = loader.reloc_list_from_symtab()
+    reloc_list = loader.reloc_list_from_llvm_readelf()
     # print(reloc_list)
     loader.load_relocations(reloc_list)
 
