@@ -77,6 +77,8 @@ class Loader():
                 self.container.add_code_relocations(section, relocations)
 
     def reloc_list_from_symtab(self):
+        print("WTF")
+        exit(-1)
         relocs = defaultdict(list)
 
         # Find all the relocation sections in the file

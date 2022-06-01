@@ -62,8 +62,8 @@ class Rewriter():
 
 
     # DATASECTIONS = [".rodata", ".data", ".bss", ".data.rel.ro", ".init_array"]
-    # DATASECTIONS = [".got", ".fini_array",  ".rodata", ".data", ".bss", ".data.rel.ro", ".init_array"]
-    DATASECTIONS = [".got", ".rodata", ".data", ".bss", ".data.rel.ro", ".init_array"]
+    DATASECTIONS = [".got", ".fini_array",  ".rodata", ".data", ".bss", ".data.rel.ro", ".init_array"]
+    #DATASECTIONS = [".got", ".rodata", ".data", ".bss", ".data.rel.ro", ".init_array"]
 
     def __init__(self, container, outfile):
         #XXX: remove global
@@ -215,7 +215,7 @@ class Symbolizer():
 
         self.symbolize_cf_transfer(container, context)
         # Symbolize remaining memory accesses
-        self.source_info_format(container, context, "/root/quickfuzz-android/libaudio/jump_table.txt")
+        self.source_info_format(container, context, "/root/quickfuzz-liming2/huawei/JumpTable_so_bak")
         self.symbolize_mem_accesses(container, context)
 
 
@@ -728,10 +728,17 @@ class Symbolizer():
         orig_reg = inst.reg_writes()[0]
 
         possible_sections = []
+        
         for name,s in container.sections.items():
-            if s.base // 0x1000 == orig_off // 0x1000 or \
-               s.base <= orig_off < s.base + s.sz:
+            if s.base <= orig_off < s.base + s.sz or \
+                s.base // 0x1000 == orig_off // 0x1000:
                 possible_sections += [name]
+
+        # if len(possible_sections) == 0:
+        #     for name,s in container.sections.items():
+        #         if s.base // 0x1000 == orig_off // 0x1000:
+        #             possible_sections += [name]
+        #             debug("binpang: 0x%x, possible section name is %s, possible sections is %d" % (orig_off, name, len(possible_sections)))
 
 
         text = container.text_section # check for .text, as it is not a datasection
@@ -1110,8 +1117,10 @@ if __name__ == "__main__":
     slist = loader.slist_from_symtab()
     loader.load_data_sections(slist, lambda x: x in Rewriter.DATASECTIONS)
 
-    reloc_list = loader.reloc_list_from_symtab()
+    # reloc_list = loader.reloc_list_from_symtab()
+    reloc_list = loader.reloc_list_from_llvm_readelf(loader.fname)
     loader.load_relocations(reloc_list)
+    exit(-1)
 
     global_list = loader.global_data_list_from_symtab()
     loader.load_globals_from_glist(global_list)

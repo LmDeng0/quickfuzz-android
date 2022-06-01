@@ -12,10 +12,19 @@ from .disasm import disasm_bytes
 import json 
 from arm.librw.util.logging import *
 
+import os
+import string
+import random
+import re
+from collections import defaultdict
+from elftools.elf.enums import ENUM_RELOC_TYPE_AARCH64
+
+
 
 class Loader():
     def __init__(self, fname):
         debug(f"Loading {fname}...")
+        self.fname = fname
         self.fd = open(fname, 'rb')
         self.elffile = ELFFile(self.fd)
         self.container = Container()
@@ -44,14 +53,42 @@ class Loader():
         section = self.elffile.get_section_by_name(".text")
         data = section.data()
         base = section['sh_addr']
-        for faddr, fvalue in fnlist.items():
-            section_offset = faddr - base
-            bytes = data[section_offset:section_offset + fvalue["sz"]]
+        size = section['sh_size']
+        if not self.is_stripped():
+            for faddr, fvalue in fnlist.items():
+                section_offset = faddr - base
+                bytes = data[section_offset:section_offset + fvalue["sz"]]
 
-            fixed_name = fvalue["name"].replace("@", "_")
-            bind = fvalue["bind"] if fixed_name != "main" else "STB_GLOBAL" #main should always be global
-            function = Function(fixed_name, faddr, fvalue["sz"], bytes, bind)
-            self.container.add_function(function)
+                fixed_name = fvalue["name"].replace("@", "_")
+                bind = fvalue["bind"] if fixed_name != "main" else "STB_GLOBAL" #main should always be global
+                function = Function(fixed_name, faddr, fvalue["sz"], bytes, bind)
+                self.container.add_function(function)
+        else:
+            sorted_func_addrs = sorted(fnlist.keys())
+            assert len(sorted_func_addrs) > 0, "There is no functions!"
+            fns_length = len(sorted_func_addrs)
+            if sorted_func_addrs[0] > base:
+                fixed_name = f"func_{hex(base)}"
+                section_offset = 0
+                sz = sorted_func_addrs[0] - base
+                bytes = data[section_offset:section_offset + sz]
+                bind = "STB_GLOBAL"
+                function = Function(fixed_name, base, sz, bytes, bind)
+                self.container.add_function(function)
+
+            for i, addr in enumerate(sorted_func_addrs):
+                section_offset = addr - base
+                fvalue = fnlist[addr]
+                if i < fns_length - 1:
+                    next_addr = sorted_func_addrs[i + 1]
+                else:
+                    next_addr = base + size
+                sz = next_addr - addr if (next_addr - addr) > fvalue["sz"] else fvalue["sz"]
+                fixed_name = fvalue["name"].replace("@", "_")
+                bytes = data[section_offset:section_offset + sz]
+                bind = fvalue["bind"] if fixed_name != "main" else "STB_GLOBAL" #main should always be global
+                function = Function(fixed_name, addr, sz, bytes, bind)
+                self.container.add_function(function)
 
     def load_data_sections(self, seclist, section_filter=lambda x: True):
         debug(f"Loading sections...")
@@ -108,6 +145,102 @@ class Loader():
                       reloc_section)
                 self.container.add_relocations(section, relocations)
 
+    def reloc_list_from_llvm_readelf(self):
+        file = self.fname
+        error_msg = "Please specify the path of llvm-readelf and make sure the version >= 11.0.0. export LLVM_READELF=/path/to/llvm-readelf"
+        def randomString(stringLength = 10):
+            letters = string.ascii_lowercase
+            return ''.join(random.choice(letters) for i in range(stringLength))
+
+        def execute_output(cmd):
+            tmp_out = randomString()
+            os.system("%s > /tmp/%s" % (cmd, tmp_out))
+            with open("/tmp/%s" % tmp_out, 'r+') as tmp_f:
+                out = tmp_f.read().strip()
+
+            os.system('rm /tmp/%s' % tmp_out)
+            return out
+
+        def get_absoluste_llvm_path(path):
+            out = execute_output("which %s" % path)
+            return out
+
+        def get_llvm_path():
+            readelf = os.getenv('LLVM_READELF')
+            if readelf is None:
+                readelf = "llvm-readelf"
+            readelf_path = get_absoluste_llvm_path(readelf)
+            if os.path.exists(readelf_path):
+                return readelf_path
+            return None
+
+        def _check_version(path):
+            out = execute_output("%s --version" % path)
+            for line in out.split("\n"):
+                if "LLVM version" in line:
+                    version = line.strip().split(" ")[-1]
+                    main_version = int(version.split('.')[0])
+                    if main_version < 11:
+                        print(error_msg)
+                        exit(-1)
+
+        llvm_path = get_llvm_path()
+        if llvm_path is None or not os.path.exists(llvm_path):
+            print(error_msg)
+            exit(-1)
+        _check_version(llvm_path)
+
+        # read relocations from llvm-readelf
+        tmp_output = randomString()
+        os.system("%s -r %s > /tmp/%s" % (llvm_path, file, tmp_output))
+        relocs = defaultdict(list)
+        secname = ""
+        with open("/tmp/%s" % tmp_output, 'r+') as relocFile:
+            for line in relocFile:
+                if len(line.strip()) == 0:
+                    continue
+
+                if 'Relocation section' in line:
+                    secname = line.split(' ')[2]
+                    secname = secname.split('\'')[1]
+                    print(secname)
+                    continue
+                entry = re.split('\s+', line.strip())
+                if len(entry) != 7 and len(entry) != 3:
+                    print("skip entry %s" % line)
+                    continue
+
+                symbol_name = None
+                st_value = None
+                addend = 0
+                try:
+                    offset = int(entry[0], 16)
+                except:
+                    continue
+                e_type = ENUM_RELOC_TYPE_AARCH64[entry[2]]
+                if len(entry) > 3:
+                    st_value = int(entry[3], 16)
+                    symbol_name = entry[4]
+                    symbol_name = symbol_name.replace("@LIBLOG", "")
+                    symbol_name = symbol_name.replace("@LIBC_OMR1", "")
+                    symbol_name = symbol_name.replace("@LIBC", "")
+                    addend = int(entry[6])
+                
+                if symbol_name == None:
+                    continue
+
+                reloc_i = {
+                    'name': symbol_name,
+                    'st_value': st_value,
+                    'offset': offset,
+                    'addend': addend,
+                    'type': e_type,
+                }
+
+                relocs[secname].append(reloc_i)
+        os.system("rm /tmp/%s" % tmp_output)
+        return relocs
+
     def reloc_list_from_symtab(self):
         relocs = defaultdict(list)
 
@@ -143,6 +276,7 @@ class Loader():
                 relocs[section.name].append(reloc_i)
 
         return relocs
+        
 
     def flist_from_symtab(self):
         symbol_tables = [
