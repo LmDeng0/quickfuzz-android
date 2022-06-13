@@ -140,7 +140,7 @@ class Converter:
 
 
 if __name__ == "__main__":
-    cvr = Converter("..//huawei/bss_func.txt", "..//huawei/libaudioprocessing_asan.s")
+    cvr = Converter("..//huawei/bss_func.txt", "..//huawei/libaudioprocessing.s_asan.s")
     cvr.gen_format_result()
     cvr.section_rebuild()
     cvr.dump_result("..//huawei/libaudioprocessing_asan_bss.s")
