@@ -2,11 +2,11 @@ import json
 import os
 import sys
 
-file_path = "/root/quickfuzz-liming2/huawei/libaudioprocessing_test_asan_bss.s"
-file_m_path = "/root/quickfuzz-liming2/huawei/libaudioprocessing_test_asan_bss_got.s"
+file_path = "..//huawei/libaudioprocessing_asan_bss.s"
+file_m_path = "..//huawei/libaudioprocessing_asan_bss_got.s"
 #file_path = os.argv[1]
 #file_m_path = os.argv[2]
-jump_table_path = "/root/quickfuzz-liming2/huawei/JumpTable_so_bak"
+jump_table_path = "..//huawei/JumpTable"
 
 fr = open(file_path, 'r')
 lines = fr.readlines()
