@@ -215,7 +215,7 @@ class Symbolizer():
 
         self.symbolize_cf_transfer(container, context)
         # Symbolize remaining memory accesses
-        self.source_info_format(container, context, "/root/quickfuzz-liming2/huawei/JumpTable_so_bak")
+        self.source_info_format(container, context, "..//huawei/JumpTable")
         self.symbolize_mem_accesses(container, context)
 
 
