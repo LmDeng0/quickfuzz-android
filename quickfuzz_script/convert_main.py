@@ -140,7 +140,7 @@ class Converter:
 
 
 if __name__ == "__main__":
-    cvr = Converter("/root/quickfuzz-liming2/huawei/bss_func.txt", "/root/quickfuzz-liming2/huawei/libaudioprocessing_test_asan.s_asan.s")
+    cvr = Converter("..//huawei/bss_func.txt", "..//huawei/libaudioprocessing_asan.s")
     cvr.gen_format_result()
     cvr.section_rebuild()
-    cvr.dump_result("/root/quickfuzz-liming2/huawei/libaudioprocessing_test_asan_bss.s")
+    cvr.dump_result("..//huawei/libaudioprocessing_asan_bss.s")
