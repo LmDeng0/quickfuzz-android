@@ -34,6 +34,8 @@ __cfi_check:
 
 
 *****************************************************************
+### 如果更跟文件名，请在相应的./quickfuzz_script/convert_main.py和GOTRebuild.py中修改
+
 python convert_main.py
 
 python GOTRebuild.py
