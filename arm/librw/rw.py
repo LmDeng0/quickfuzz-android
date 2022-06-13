@@ -573,7 +573,7 @@ class Symbolizer():
         lines = []
         with open(fpath) as f:
             lines = f.readlines()
-        if len(lines) != 6:
+        if len(lines) != 5:
             print("invalid source ")
             return False
         lines = [json.loads(l) for l in lines]
@@ -594,7 +594,7 @@ class Symbolizer():
                 value_list.append(lines[2][sum(case_list[0:i]): sum(case_list[0:i]) + case_list[i]])
         size_list = lines[3]
         address_list = [i for i in lines[4]]
-        base_case_list = [i  for i in lines[5]]
+        base_case_list = [i + 4 for i in lines[4]] 
         print(base_case_list)
         self.symbolize_switch_tables_new(container, context, jmptbl_addr_list, case_list, value_list, size_list,
                                          address_list, base_case_list)

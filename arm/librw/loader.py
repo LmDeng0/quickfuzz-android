@@ -16,6 +16,7 @@ import os
 import string
 import random
 import re
+import struct
 from collections import defaultdict
 from elftools.elf.enums import ENUM_RELOC_TYPE_AARCH64
 
@@ -147,6 +148,40 @@ class Loader():
 
     def reloc_list_from_llvm_readelf(self):
         file = self.fname
+
+        load_ranges = list()
+        t_file = open(file, "rb")
+        content = t_file.read()
+        # t_file.close()
+        sec_infos = list()
+
+        def _is_in_load_ranges(addr):
+            for (start, end) in load_ranges:
+                if addr >= start and addr < end:
+                    return True
+            return False
+
+        def _retrive_sec_info(addr):
+            for (start, size, s_offset) in sec_infos:
+                if addr >= start and addr < size + start:
+                    return addr - start + s_offset
+            return -1
+
+        elffile = ELFFile(t_file)
+        for seg in elffile.iter_segments():
+            if seg['p_type'] != 'PT_LOAD':
+                continue
+
+            load_ranges.append((seg['p_vaddr'], seg['p_vaddr'] + seg['p_memsz']))
+        
+        for sec in elffile.iter_sections():
+            sec_name = sec.name
+            if sec_name == "":
+                continue
+            sec_start = sec['sh_addr']
+            sec_offset = sec['sh_offset']
+            sec_infos.append((sec_start, sec['sh_size'], sec_offset))
+
         error_msg = "Please specify the path of llvm-readelf and make sure the version >= 11.0.0. export LLVM_READELF=/path/to/llvm-readelf"
         def randomString(stringLength = 10):
             letters = string.ascii_lowercase
@@ -218,6 +253,7 @@ class Loader():
                 except:
                     continue
                 e_type = ENUM_RELOC_TYPE_AARCH64[entry[2]]
+                type_name = entry[2]
                 if len(entry) > 3:
                     st_value = int(entry[3], 16)
                     symbol_name = entry[4]
@@ -225,9 +261,18 @@ class Loader():
                     symbol_name = symbol_name.replace("@LIBC_OMR1", "")
                     symbol_name = symbol_name.replace("@LIBC", "")
                     addend = int(entry[6])
+                elif secname == ".relr.dyn" and type_name == "R_AARCH64_RELATIVE" and _is_in_load_ranges(offset):
+                    f_offset = _retrive_sec_info(offset)
+                    bytes = content[f_offset: f_offset+8]
+                    pointer = struct.unpack("<Q", bytes)[0]
+                    if _is_in_load_ranges(pointer):
+                        addend = pointer
+
+                    
+
                 
-                if symbol_name == None:
-                    continue
+                # if symbol_name == None:
+                #     continue
 
                 reloc_i = {
                     'name': symbol_name,
