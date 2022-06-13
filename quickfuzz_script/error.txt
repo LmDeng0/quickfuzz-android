@@ -1,0 +1,104 @@
+error: fixup value out of range
+        tbnz w0, #0, .LC21d3c
+        ^
+/tmp/.afl-2586-1654602504.s:371568:2: error: fixup value out of range
+        tbnz w10, #0, .LC21d3c
+        ^
+/tmp/.afl-2586-1654602504.s:371572:2: error: fixup value out of range
+        tbnz w10, #0, .LC21d3c
+        ^
+/tmp/.afl-2586-1654602504.s:371576:2: error: fixup value out of range
+        tbnz w10, #0, .LC21d3c
+        ^
+/tmp/.afl-2586-1654602504.s:371580:2: error: fixup value out of range
+        tbnz w10, #0, .LC21d3c
+        ^
+/tmp/.afl-2586-1654602504.s:372097:2: error: fixup value out of range
+        tbnz w0, #0, .LC21db4
+        ^
+/tmp/.afl-2586-1654602504.s:372101:2: error: fixup value out of range
+        tbnz w10, #0, .LC21db4
+        ^
+/tmp/.afl-2586-1654602504.s:372105:2: error: fixup value out of range
+        tbnz w10, #0, .LC21db4
+        ^
+/tmp/.afl-2586-1654602504.s:372109:2: error: fixup value out of range
+        tbnz w10, #0, .LC21db4
+        ^
+/tmp/.afl-2586-1654602504.s:372113:2: error: fixup value out of range
+        tbnz w10, #0, .LC21db4
+        ^
+/tmp/.afl-2586-1654602504.s:372634:2: error: fixup value out of range
+        tbnz w0, #0, .LC21e40
+        ^
+/tmp/.afl-2586-1654602504.s:372638:2: error: fixup value out of range
+        tbnz w10, #0, .LC21e40
+        ^
+/tmp/.afl-2586-1654602504.s:372642:2: error: fixup value out of range
+        tbnz w10, #0, .LC21e40
+        ^
+/tmp/.afl-2586-1654602504.s:372646:2: error: fixup value out of range
+        tbnz w10, #0, .LC21e40
+        ^
+/tmp/.afl-2586-1654602504.s:372650:2: error: fixup value out of range
+        tbnz w10, #0, .LC21e40
+        ^
+/tmp/.afl-2586-1654602504.s:373177:2: error: fixup value out of range
+        tbnz w0, #0, .LC21ee0
+        ^
+/tmp/.afl-2586-1654602504.s:373181:2: error: fixup value out of range
+        tbnz w10, #0, .LC21ee0
+        ^
+/tmp/.afl-2586-1654602504.s:373185:2: error: fixup value out of range
+        tbnz w10, #0, .LC21ee0
+        ^
+/tmp/.afl-2586-1654602504.s:373189:2: error: fixup value out of range
+        tbnz w10, #0, .LC21ee0
+        ^
+/tmp/.afl-2586-1654602504.s:373193:2: error: fixup value out of range
+        tbnz w10, #0, .LC21ee0
+        ^
+/tmp/.afl-2586-1654602504.s:373922:2: error: fixup value out of range
+        tbnz w0, #0, .LC21ff8
+        ^
+/tmp/.afl-2586-1654602504.s:373926:2: error: fixup value out of range
+        tbnz w10, #0, .LC21ff8
+        ^
+/tmp/.afl-2586-1654602504.s:373930:2: error: fixup value out of range
+        tbnz w10, #0, .LC21ff8
+        ^
+/tmp/.afl-2586-1654602504.s:373934:2: error: fixup value out of range
+        tbnz w10, #0, .LC21ff8
+        ^
+/tmp/.afl-2586-1654602504.s:373938:2: error: fixup value out of range
+        tbnz w10, #0, .LC21ff8
+        ^
+/tmp/.afl-2586-1654602504.s:374595:2: error: fixup value out of range
+        tbnz w0, #0, .LC22134
+        ^
+/tmp/.afl-2586-1654602504.s:374599:2: error: fixup value out of range
+        tbnz w10, #0, .LC22134
+        ^
+/tmp/.afl-2586-1654602504.s:374603:2: error: fixup value out of range
+        tbnz w10, #0, .LC22134
+        ^
+/tmp/.afl-2586-1654602504.s:374607:2: error: fixup value out of range
+        tbnz w10, #0, .LC22134
+        ^
+/tmp/.afl-2586-1654602504.s:374611:2: error: fixup value out of range
+        tbnz w10, #0, .LC22134
+        ^
+/tmp/.afl-2586-1654602504.s:698196:2: error: fixup value out of range
+        tbnz w16, #0, .LC31cb0
+        ^
+/tmp/.afl-2586-1654602504.s:698200:2: error: fixup value out of range
+        tbnz w8, #0, .LC31cb0
+        ^
+/tmp/.afl-2586-1654602504.s:698204:2: error: fixup value out of range
+        tbnz w8, #0, .LC31cb0
+        ^
+/tmp/.afl-2586-1654602504.s:698208:2: error: fixup value out of range
+        tbnz w8, #0, .LC31cb0
+        ^
+/tmp/.afl-2586-1654602504.s:698212:2: error: fixup value out of range
+        tbnz w8, #0, .LC31cb0
